@@ -26,7 +26,7 @@ pip install conan
 
 ## Detect profile
 
-Conan handles the build tools to be used in particular situation with profiles:
+Conan handles the build tools to be used in particular situations with profiles:
 
 ```bash
 conan profile list
@@ -44,6 +44,41 @@ It's possible to create a default profile by detecting the toolchains available:
 conan profile new default --detect
 ```
 
+Sample output on MacOS:
+
+```output
+Found apple-clang 12.0
+Profile created with detected settings: /Users/USER/.conan/profiles/default```
+```
+
+### Show profile
+
+Be sure of what Conan detected; eventually some customizations are in order:
+
+```bash
+conan profile show default
+```
+
+Sample output on MacOS:
+
+```output
+Configuration for profile default:
+
+[settings]
+os=Macos
+os_build=Macos
+arch=x86_64
+arch_build=x86_64
+compiler=apple-clang
+compiler.version=12.0
+compiler.libcxx=libc++
+build_type=Release
+[options]
+[conf]
+[build_requires]
+[env]
+```
+
 ### GCC `libstdc++` vs `libstdc++11`
 
 If GCC (>=5.1) is being used, `conan detect` selects the old runtime library (`libstdc++`) for backward compatibility. So for GCC systems the following command can be issued afterward profile detection to update the runtime library:
@@ -51,3 +86,17 @@ If GCC (>=5.1) is being used, `conan detect` selects the old runtime library (`l
 ```bash
 conan profile update settings.compiler.libcxx=libstdc++11 default
 ```
+
+## Create new project
+
+Despite being a package manager, Conan has some features that come very handy for rapid project prototyping.
+
+Its subcommand `new` generates project skeletons based on a template specification:
+
+```bash
+conan new basic -d name=mygame -d requires=math/1.0 -d requires=ai/1.3
+```
+
+> Be sure to the documentation: [Package scaffolding for conan new command][conanNewDocs].
+
+[conanNewDocs]: https://docs.conan.io/en/1.53/extending/template_system/command_new.html
