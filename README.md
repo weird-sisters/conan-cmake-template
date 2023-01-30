@@ -13,7 +13,7 @@ CMake is a set of tools to help build, test and package software:
 [conanGithub]: https://github.com/conan-io/conan
 [cmakeSite]: https://cmake.org/
 
-This repository presents a development workflow based on Conan and CMake expected to work on any supported platform.
+This repository presents a project structure and development workflow based on Conan and CMake. It is expected to work on any supported platform.
 
 ## Topics
 
