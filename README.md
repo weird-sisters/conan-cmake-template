@@ -25,6 +25,7 @@ This repository presents a development workflow based on Conan and CMake expecte
     - [Show profile](#show-profile)
     - [GCC `libstdc++` vs `libstdc++11`](#gcc-libstdc-vs-libstdc11)
   - [CMake overview](#cmake-overview)
+  - [Install CMake](#install-cmake)
   - [Conan \& CMake](#conan--cmake)
     - [Create new project](#create-new-project)
 
@@ -126,6 +127,14 @@ cmake version 3.24.3
 
 CMake suite maintained and supported by Kitware (kitware.com/cmake).
 ```
+
+## Install CMake
+
+If CMake is not already present it's possible to download an installer from the official site.
+
+- Download CMake: [cmake.org/download][cmakeDownload].
+
+[cmakeDownload]: https://cmake.org/download/
 
 ## Conan & CMake
 
