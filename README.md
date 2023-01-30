@@ -21,7 +21,7 @@ This repository presents a development workflow based on Conan and CMake expecte
   - [Topics](#topics)
   - [Conan overview](#conan-overview)
   - [Install Conan](#install-conan)
-  - [Detect Conan profile](#detect-conan-profile)
+  - [Detect Conan's default profile](#detect-conans-default-profile)
     - [Show profile](#show-profile)
     - [GCC `libstdc++` vs `libstdc++11`](#gcc-libstdc-vs-libstdc11)
   - [CMake overview](#cmake-overview)
@@ -35,7 +35,7 @@ One of the main distinctive features of Conan is its the ability to manage binar
 
 In order to do that it has to properly handle a diversity of architectures, compilers, standard libraries, cross-compilation strategies etc. Also it must provide a way for package authors to express how these features affect binary compatibility.
 
-Conan can also compile missing dependencies and store the locally, alongside downloaded binaries, so it's possible to share them between projects.
+Conan can also compile missing dependencies and store them locally, alongside downloaded binaries, so it's possible to share them between projects.
 
 ## Install Conan
 
@@ -45,7 +45,7 @@ It requires Python 3 and the recommended way to install Conan is with `pip`:
 pip install conan
 ```
 
-## Detect Conan profile
+## Detect Conan's default profile
 
 Conan handles the build tools to be used in particular situations with profiles:
 
