@@ -16,7 +16,7 @@ In order to do that it has to properly handle a diversity of architectures, comp
 
 Conan can also compile missing dependencies and store the locally, alongside downloaded binaries, so it's possible to share them between projects.
 
-## Instal Conan
+## Install Conan
 
 It requires Python 3 and the recommended way to install Conan is with `pip`:
 
